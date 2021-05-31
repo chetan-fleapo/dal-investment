@@ -13,6 +13,9 @@ html{
 body {
     box-sizing: border-box;
     font-family: 'Jost', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh!important;
 }
 section{
     padding:120px 0 50px 0;

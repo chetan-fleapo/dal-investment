@@ -67,7 +67,10 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: 'Jost', sans-serif; }
+  font-family: 'Jost', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh !important; }
 
 section {
   padding: 120px 0 50px 0; }
@@ -75,11 +78,14 @@ section {
 .page-wrapper {
   width: 100%;
   height: auto;
-  position: absolute;
-  z-index: 100;
   background-image: linear-gradient(270deg, #f7f9fc, #f7f9fc);
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2);
-  transition: all 0.6s ease-in-out; }
+  transition: all 0.6s ease-in-out;
+  position: absolute;
+  z-index: 1000; }
+
+.floow-us-on {
+  display: none; }
 
 .fixed-scrolltop {
   position: fixed;
@@ -103,8 +109,11 @@ section {
 
 .navbar .logo {
   height: 70px;
-  width: 120px;
+  width: 250px;
   justify-self: start; }
+  @media only screen and (max-width: 768px) {
+    .navbar .logo {
+      width: 180px; } }
   .navbar .logo img {
     width: 100%;
     height: 100%; }
@@ -122,6 +131,9 @@ section {
   margin-left: 30px;
   text-transform: capitalize;
   text-decoration: none !important; }
+  @media only screen and (max-width: 768px) {
+    .nav-item a {
+      margin-left: 0px; } }
 
 .active, a.active {
   color: #f33074;
@@ -198,14 +210,29 @@ section {
     cursor: pointer; }
   .mobile-nav {
     transform: translate(0%) !important;
-    left: 0; } }
+    left: 0; }
+  .floow-us-on {
+    padding: 0px 30px;
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+    display: block; }
+    .floow-us-on span {
+      font-size: 16px;
+      font-weight: 700; }
+    .floow-us-on a i {
+      color: #0072b1 !important;
+      font-size: 18px; }
+    .floow-us-on .active {
+      border: 0px !important; } }
+
+.footer-component {
+  margin-top: auto !important; }
 
 footer {
   padding: 20px 0;
   background: #313131;
-  color: rgba(255, 255, 255, 0.7);
-  position: relative;
-  z-index: -1; }
+  color: rgba(255, 255, 255, 0.7); }
   footer .flex-wrapper {
     width: 100%;
     display: flex;
@@ -246,21 +273,95 @@ footer {
     footer .circle-linkedin i {
       font-size: 16px; }
 
+.about-us__wrapper-outer {
+  background: #f6f7f8;
+  z-index: 3;
+  padding: 0 50px 30px 50px;
+  border-radius: 10px; }
+  @media only screen and (max-width: 768px) {
+    .about-us__wrapper-outer {
+      padding: 0px; } }
+  .about-us__wrapper-outer::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    content: '';
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .about-us__wrapper-outer .thumbnails {
+    position: relative;
+    z-index: 10;
+    margin-top: 30px; }
+    .about-us__wrapper-outer .thumbnails .img-widget {
+      position: relative;
+      z-index: 2;
+      width: 120px;
+      height: 120px;
+      cursor: pointer;
+      margin: 0 auto; }
+      @media only screen and (max-width: 768px) {
+        .about-us__wrapper-outer .thumbnails .img-widget {
+          width: 100px;
+          height: 100px; } }
+      .about-us__wrapper-outer .thumbnails .img-widget img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: contain;
+        background-color: #d6d6d6;
+        position: absolute; }
+      .about-us__wrapper-outer .thumbnails .img-widget .over-link {
+        position: absolute;
+        z-index: 5;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        background: #d6d6d6;
+        transform: scale(0);
+        left: 0%;
+        top: 0%;
+        transition: all 0.6 ease-in-out; }
+        .about-us__wrapper-outer .thumbnails .img-widget .over-link a {
+          text-decoration: none; }
+          .about-us__wrapper-outer .thumbnails .img-widget .over-link a i {
+            font-size: 20px; }
+      .about-us__wrapper-outer .thumbnails .img-widget:hover .over-link {
+        transform: scale(1); }
+    .about-us__wrapper-outer .thumbnails p {
+      color: #999;
+      text-transform: uppercase; }
+    .about-us__wrapper-outer .thumbnails .content-wrapper {
+      padding: 20px 15px 10px 15px; }
+      @media only screen and (max-width: 768px) {
+        .about-us__wrapper-outer .thumbnails .content-wrapper {
+          padding: 15px 0px; } }
+      .about-us__wrapper-outer .thumbnails .content-wrapper .title-team h4 {
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: capitalize; }
+      .about-us__wrapper-outer .thumbnails .content-wrapper .title-team p {
+        font-size: 12px;
+        text-align: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0px; }
+
 header {
   width: 100%;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/home.jpg") no-repeat center;
   background-size: cover;
-  position: relative;
-  display: flex; }
+  padding-top: 70px; }
   header .over-content {
     width: 100%;
-    height: 100%;
+    height: 100% !important;
     color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 70px; }
+    display: table; }
     header .over-content h1 {
       font-size: 52px;
       font-weight: 700; }
@@ -294,85 +395,86 @@ header {
 .contact-us form span, .contact-us form small {
   color: red; }
 
-.team__wrapper-outer {
+.team {
   width: 100%;
-  height: 100%;
-  background: #f6f7f8;
-  z-index: 3;
-  padding: 0 50px 30px 50px;
-  border-radius: 10px; }
-  @media only screen and (max-width: 768px) {
-    .team__wrapper-outer {
-      padding: 0px; } }
-  .team__wrapper-outer::after {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
-    content: '';
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background: #fff;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; }
-  .team__wrapper-outer .thumbnails {
-    position: relative;
-    z-index: 10;
-    margin-top: 30px; }
-    .team__wrapper-outer .thumbnails .img-widget {
+  min-height: calc(100vh - 80px - 70px) !important; }
+  .team__wrapper-outer {
+    background: #f6f7f8;
+    z-index: 3;
+    padding: 0 50px 30px 50px;
+    border-radius: 10px; }
+    @media only screen and (max-width: 768px) {
+      .team__wrapper-outer {
+        padding: 0px; } }
+    .team__wrapper-outer::after {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      content: '';
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background: #fff;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .team__wrapper-outer .thumbnails {
       position: relative;
-      z-index: 2;
-      width: 120px;
-      height: 120px;
-      cursor: pointer;
-      margin: 0 auto; }
-      @media only screen and (max-width: 768px) {
-        .team__wrapper-outer .thumbnails .img-widget {
-          width: 100px;
-          height: 100px; } }
-      .team__wrapper-outer .thumbnails .img-widget img {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        object-fit: contain;
-        background-color: #d6d6d6;
-        position: absolute; }
-      .team__wrapper-outer .thumbnails .img-widget .over-link {
-        position: absolute;
-        z-index: 5;
-        border-radius: 50%;
-        width: 100%;
-        height: 100%;
-        background: #d6d6d6;
-        transform: scale(0);
-        left: 0%;
-        top: 0%;
-        transition: all 0.6 ease-in-out; }
-        .team__wrapper-outer .thumbnails .img-widget .over-link a {
-          text-decoration: none; }
-          .team__wrapper-outer .thumbnails .img-widget .over-link a i {
-            font-size: 20px; }
-      .team__wrapper-outer .thumbnails .img-widget:hover .over-link {
-        transform: scale(1); }
-    .team__wrapper-outer .thumbnails p {
-      color: #999;
-      text-transform: uppercase; }
-    .team__wrapper-outer .thumbnails .content-wrapper {
-      padding: 20px 15px 10px 15px; }
-      @media only screen and (max-width: 768px) {
-        .team__wrapper-outer .thumbnails .content-wrapper {
-          padding: 15px 0px; } }
-      .team__wrapper-outer .thumbnails .content-wrapper .title-team h4 {
-        font-size: 18px;
-        font-weight: 600;
-        text-transform: capitalize; }
-      .team__wrapper-outer .thumbnails .content-wrapper .title-team p {
-        font-size: 12px;
-        text-align: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 0px; }
+      z-index: 10;
+      margin-top: 30px; }
+      .team__wrapper-outer .thumbnails .img-widget {
+        position: relative;
+        z-index: 2;
+        width: 120px;
+        height: 120px;
+        cursor: pointer;
+        margin: 0 auto; }
+        @media only screen and (max-width: 768px) {
+          .team__wrapper-outer .thumbnails .img-widget {
+            width: 100px;
+            height: 100px; } }
+        .team__wrapper-outer .thumbnails .img-widget img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: contain;
+          background-color: #d6d6d6;
+          position: absolute; }
+        .team__wrapper-outer .thumbnails .img-widget .over-link {
+          position: absolute;
+          z-index: 5;
+          border-radius: 50%;
+          width: 100%;
+          height: 100%;
+          background: #d6d6d6;
+          transform: scale(0);
+          left: 0%;
+          top: 0%;
+          transition: all 0.6 ease-in-out; }
+          .team__wrapper-outer .thumbnails .img-widget .over-link a {
+            text-decoration: none; }
+            .team__wrapper-outer .thumbnails .img-widget .over-link a i {
+              font-size: 20px; }
+        .team__wrapper-outer .thumbnails .img-widget:hover .over-link {
+          transform: scale(1); }
+      .team__wrapper-outer .thumbnails p {
+        color: #999;
+        text-transform: uppercase; }
+      .team__wrapper-outer .thumbnails .content-wrapper {
+        padding: 20px 15px 10px 15px; }
+        @media only screen and (max-width: 768px) {
+          .team__wrapper-outer .thumbnails .content-wrapper {
+            padding: 15px 0px; } }
+        .team__wrapper-outer .thumbnails .content-wrapper .title-team h4 {
+          font-size: 18px;
+          font-weight: 600;
+          text-transform: capitalize; }
+        .team__wrapper-outer .thumbnails .content-wrapper .title-team p {
+          font-size: 12px;
+          text-align: uppercase;
+          letter-spacing: 1px;
+          margin-bottom: 0px; }
 
 @media only screen and (max-width: 768px) {
   .careers .mv-txt-left {
