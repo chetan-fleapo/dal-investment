@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
+    <title>Careers</title>
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <script src="js/header.js" defer></script>
+    <script src="js/footer.js" defer></script>
+</head>
+<body>
+    <!-- navbar start -->
+    <header-component></header-component>
+    <section class="careers">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="title text-center">
+                        <h1>Careers</h1>
+                        <!-- <p>We aim to attract collaborative and value driven individuals. Our team comprises young millennials and seasoned experts, providing an environment of knowledge sharing across teams and its members.For an exciting career in capital markets and financial research & analysis, reach out to us on : hr@mountintra.com </p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="careers__open-position-wrap text-center">
+                        <h2>Sorry no Open Positions</h2>
+                        <!-- <div class="apply-for-job border-bottom">
+                            <div class="row py-3 align-items-center">
+                                <div class="col-12 col-md-4 text-left">
+                                    <h5>Tech Analyst</h5>
+                                </div>
+                                <div class="col-12 col-md-4 text-center mv-txt-left">
+                                    <h6><i class="fas fa-map-marker-alt"></i> Kolkata, Mumbai</h6>
+                                </div>
+                                <div class="col-12 col-md-4 text-right mv-txt-left">
+                                    <a href="#" class="button" id="applyforjob">Apply for this job</a>
+                                </div>
+                            </div>
+                            <div class="row text-left">
+                                <div class="col-12">
+                                    <div class="job-description">
+                                        <p>
+                                            We are looking for a resourceful candidate to join our Financial research team based out of the company’s office in Kolkata or Mumbai, India. An ideal fit will be a self- motivated individual with a deep understanding of new age technology companies in both domestic and international capital markets.
+                                        </p>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- footer start -->
+<div class="fixed-bottom">
+    <footer-component></footer-component>
+</div>
+<script src="js/navbar.js" defer></script>
+<script src="js/active.js" defer></script>
+<script src="js/jqurey.js"></script>
+
+<script>
+    document.getElementById("applyforjob").addEventListener('click', (event) => {
+        event.preventDefault();
+        let slider = document.querySelector(".slider");
+
+        slider.classList.add("slider-active")
+    })
+    document.querySelector(".close-ico").addEventListener('click', () => {
+        let slider = document.querySelector(".slider");
+
+        slider.classList.remove("slider-active")
+    })
+</script>
+</body>
+</html>

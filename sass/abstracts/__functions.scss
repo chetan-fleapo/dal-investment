@@ -1,0 +1,58 @@
+h1,h2,h3,h4,h5,h6,ul,li,p{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+.button{
+    position:relative;
+    font:700 13px 'Jost';
+    letter-spacing: 1px;
+    border: 0;
+    border-radius: 5px;
+    cursor:pointer;
+    text-decoration:none;
+    text-transform: uppercase;
+    color: $white-clr;
+    padding: 13px 30px;
+    background:$bg-linear;
+    display:inline-block;min-width:80px;text-align:center;white-space:nowrap;
+    text-decoration: none;
+    transition: background-color 0.6s ease-in-out;
+    @media only screen and (max-width: 600px) {
+        padding: 10px 20px;
+        font-size: 11px;
+    }
+    
+    &:hover{
+        background:linear-gradient( to left, #fe7360, #f33074);
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.title{
+    margin-bottom: 30px;
+    h1{
+        font:700 38px 'Jost';
+        @media only screen and (max-width: 600px) {
+            font-size: 30px;
+        }
+    }
+    p{
+        font-size: 18px;
+        color: $graydark-clr;
+        font-weight: 600;
+        line-height:25px;
+        @media only screen and (max-width: 600px) {
+            font-size: 15px;
+        }
+    }
+}

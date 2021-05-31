@@ -1,0 +1,39 @@
+.contact-us{
+    &__address-wrap{
+        ul{
+            h3{
+                font: 400 24px 'Jost', sans-serif;
+            }
+            li{
+                .circle-round{
+                    background: $color-primary;
+                    i{
+                        color: $white-clr;
+                        font-size: 18px;
+                        width: 35px;
+                        height: 35px;
+                    }
+                }
+
+                .wrap{
+                    margin-left: 15px;
+                    h6{
+                        font:700 22px 'Jost';
+                    }
+                    p,a{
+                        color: $graydark-clr;
+                        margin: 0;
+                    }
+                    .fa-linkedin-in{
+                        color: #0072b1;
+                    }
+                }
+            }
+        }
+    }
+    form{
+        span, small{
+            color: red;
+        }
+    }
+}
