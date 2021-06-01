@@ -14,12 +14,10 @@ header {
     h1 {
       font-size: 52px;
       font-weight: 700;
+      margin-bottom: 30px;
       @include respond(phone) {
         font-size: 32px;
       }
-    }
-    p {
-      margin: 20px 0;
     }
   }
 }

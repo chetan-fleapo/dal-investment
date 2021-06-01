@@ -364,12 +364,11 @@ header {
     display: table; }
     header .over-content h1 {
       font-size: 52px;
-      font-weight: 700; }
+      font-weight: 700;
+      margin-bottom: 30px; }
       @media only screen and (max-width: 768px) {
         header .over-content h1 {
           font-size: 32px; } }
-    header .over-content p {
-      margin: 20px 0; }
 
 .contact-us__address-wrap ul h3 {
   font: 400 24px 'Jost', sans-serif; }
