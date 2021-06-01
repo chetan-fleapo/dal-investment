@@ -2,7 +2,6 @@ class Header extends HTMLElement {
     constructor() {
       super();
     }
-  
     connectedCallback() {
       this.innerHTML = `
         <div class="page-wrapper">
@@ -23,7 +22,6 @@ class Header extends HTMLElement {
                           <li class="nav-item"><a href="about-us.html">About Us</a></li>
                           <li class="nav-item"><a href="investment-philosophy.html">investment philosophy</a></li>
                           <li class="nav-item"><a href="careers.html">Careers</a></li>
-                          <li class="nav-item"><a href="team.html">team</a></li>
                           <li class="nav-item"><a href="contact-us.html">Contact Us</a></li>
                           <div class="floow-us-on">
                           <div class="inner-wrap d-flex justify-content-between align-items-center">  
