@@ -1,9 +1,9 @@
 class Header extends HTMLElement {
-    constructor() {
-      super();
-    }
-    connectedCallback() {
-      this.innerHTML = `
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    this.innerHTML = `
         <div class="page-wrapper">
           <div class="container">
               <div class="nav-wrapper">
@@ -26,7 +26,7 @@ class Header extends HTMLElement {
                           <div class="floow-us-on">
                           <div class="inner-wrap d-flex justify-content-between align-items-center">  
                               <span>Follow Us On</span>
-                              <a href=""> <i class="fab fa-linkedin-in"></i></a>
+                              <a href="https://www.linkedin.com/company/dawnstar-trading-dmcc"> <i class="fab fa-linkedin-in"></i></a>
                             </div>
                           </div>
                       </ul>
@@ -35,8 +35,7 @@ class Header extends HTMLElement {
               </div>
           </div>
       `;
-    }
   }
-  
-  customElements.define("header-component", Header);
-  
+}
+
+customElements.define("header-component", Header);
