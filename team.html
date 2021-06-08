@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon" />
+    <title>Team</title>
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <script src="js/header.js" defer></script>
+    <script src="js/footer.js" defer></script>
+</head>
+<body>
+    <!-- navbar start -->
+    <header-component></header-component>
+    <section class="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title text-center">
+                        <h1>Our Team</h1>
+                        </div>
+                    </div>
+                </div>
+            <div class="team__wrapper-outer position-relative">
+                <div class="row" id="display-team">
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- footer start -->
+     <div class="footer-component">
+        <footer-component></footer-component>
+   </div>
+    <script src="js/navbar.js" defer></script>
+    <script src="js/active.js" defer></script>
+    <script src="js/jqurey.js"></script>
+    <script>
+        let team = [
+                    {
+                        id: 1,
+                        name: "Suryakant Dalmia",
+                        designation: "Director Strategic Initiatives",
+                        photo: "img/team/suryakant-dalmia.png",
+                        linkedin: "https://www.linkedin.com/in/suryakant-dalmia-a777123/"
+                    },
+                    {
+                        id: 2,
+                        name: "Saurabh Marodia",
+                        designation: "Director Finance",
+                        photo: "img/team/saurabh-marodia.png",
+                        linkedin: "https://ae.linkedin.com/in/saurabh-marodia-053b7a32?trk=public_profile_browsemap_profile-result-card_result-card_full-click"
+                    },
+                    {
+                        id: 3,
+                        name: "Vishal Dalmia",
+                        designation: "Director Research",
+                        photo: "img/team/vishal-dalmia.png",
+                        linkedin: "https://www.linkedin.com/in/vdalmia/"
+                    },
+                    {
+                        id: 4,
+                        name: "Priti Marodia",
+                        designation: "Director Administration",
+                        photo: "img/team/priti-marodia.png",
+                        linkedin: "https://ae.linkedin.com/in/saurabh-marodia-053b7a32?trk=public_profile_browsemap_profile-result-card_result-card_full-click"
+                    },
+                    {
+                        id: 5,
+                        name: "Gaurav Chamaria",
+                        designation: "Admin Executive",
+                        photo: "img/team/gaurav-charmaria.png",
+                        linkedin: "#"
+                    },
+                    {
+                        id: 6,
+                        name: "Viktoriia Novokova ",
+                        designation: "Accounts Manager",
+                        photo: "img/team/viktoria-novokova.png",
+                        linkedin: "#"
+                    },
+
+                ];
+
+        team.forEach( (teamData) => {
+            document.getElementById("display-team").innerHTML +=
+                `<div class="col-6 col-md-4 m-auto ">
+                   <div class="thumbnails">
+                        <div class="img-widget">
+                            <img src="${teamData.photo}" class="img-fluid" alt="Photo">
+                            <div class="over-link">
+                                <a href="${teamData.linkedin}" class="d-flex justify-content-center align-items-center w-100 h-100" target="_blank">
+                                    <i class="fab fa-linkedin-in"></i>      
+                                </a>  
+                           </div>
+                        </div>
+                        <div class="content-wrapper text-center">
+                            <div class="title-team">
+                                <h4>${teamData.name}</h4>
+                                <p>${teamData.designation}</p>    
+                             </div>
+                        </div>
+                    </div>
+                </div>`
+        })
+    </script>
+</body>
+</html>
