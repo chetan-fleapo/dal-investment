@@ -6,8 +6,8 @@
     border-radius: 10px;
     box-shadow: 0 0px 6px rgba(0,0,0,0.2);
     
-    @include respond(phone) {
-      padding: 0px;
+    @include respond(tab-port){
+      padding: 30px 0 0 0; 
     }
 
     .thumbnails {
@@ -95,11 +95,23 @@
     , #f7f9fc, #f7f9fc);
     padding: 50px 30px;
 }
+.skd-profile-list p{
+  @include respond(phone) {
+    font-size: 16px;
+  }
+}
 .skd-profile-list ul {
   margin: 0;
 }
+
 .skd-profile-list ul li {
   list-style: circle;
   margin-left: 35px;
   line-height: 40px;
+  
+  @include respond(phone) {
+    line-height: 25px;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
 }
